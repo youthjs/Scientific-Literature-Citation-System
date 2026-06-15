@@ -1,0 +1,11 @@
+# 超大数据集文件
+*.zip
+*.csv
+train_pred/data/
+
+# Jupyter缓存目录
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# IDE配置
+.idea/

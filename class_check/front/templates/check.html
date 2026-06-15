@@ -1,0 +1,95 @@
+{% extends 'front_base.html' %}
+
+{% block title %}
+    使用
+{% endblock %}
+
+{% block header %}
+    <script src="{% static 'js/check.js' %}"></script>
+     <style>
+        .box {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .box-header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        .box-header h1 {
+            margin: 0;
+        }
+        .row {
+            margin-top: 20px;
+        }
+        .row p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .input-image span {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 10px;
+            resize: vertical;
+        }
+        #news-change {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #news-change:hover {
+            background-color: #0056b3;
+        }
+    </style>
+{% endblock %}
+
+{% block main-container %}
+    <div class="box">
+        <div class="box-header page-header">
+            <h1>上传科技文献进行识别</h1>
+        </div>
+        <div class="row">
+            <p>测试文字1（数学）："高等数学"不仅是本科生必修课程之一,也是研究生入学考试的重要科目之一。为了研究"高等数学"成绩的相关性,随机抽取若干专业学生的"高数成绩"成绩,分别统计其中的填空题成绩和学生的"线性代数"成绩,通过相关关系的研究方法分析统计数据,得出它们之间的定量关系,探讨提高"高等数学"成绩的若干解决方法。</p>
+            <p>
+                测试文字2（法学）：领域法学已获学界普遍认可，但其尚未成为系统性审视学科知识谱系的基础，作为首倡者的财税法学界有必要反思。部门法学在研究视域上聚焦个别部门法议题，研究思路上注重成果的体系性与理论性，研究方法上以规范分析方法为尊，该范式曾具有重大历史意义，但难以满足新时代的社会需求，而领域法学提倡跨部门法、跨学科视域，重视问题的体系性与现实性，鼓励运用多元方法，故应推动其落地。检视财税法学现有知识谱系，可知其在研究视域上以税法为中心，研究思路上以微观问题为中心，研究方法上以规范分析方法为中心，这与领域法学的要求存在差距。今后的财税法学研究有必要以领域为研究视域，依循分层构造的问题域拓展研究思路，并协调运用多元研究方法。为实现前述图景，应进一步开展艰难的方法论研究。</p>
+            知网：<a href="https://www.cnki.net/" target="_blank">https://www.cnki.net/</a>
+            <div class="col-md-12">
+                <form action="" class="form-group">
+                    <div class="box-body">
+                        <div class="input-image">
+                            <span>请在下方输入框中输入文字</span>
+                            <textarea name="news-data" id="news-data" >
+<!--                                      cols="0" rows="0"-->
+<!--                                      style="width: 435px; height: 193px;">-->
+                            </textarea>
+                            <button class="btn btn-primary pull-right" id="news-change">检测</button>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'front_base.html' %}
+
+{% block title %}
+    首页
+{% endblock %}
+
+{% block header %}
+    <link rel="stylesheet" href="{% static 'css/index.min.css' %}">
+    <style>
+        .box {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .box-header {
+            background-color: #A52A2A;
+            color: white;
+            padding: 10px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+        }
+        .box-header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .box-header small {
+            display: block;
+            font-size: 14px;
+        }
+        .box-body {
+            padding: 20px;
+        }
+        .box-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .info-image {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            flex: 1;
+            min-width: 300px;
+            margin-right: 20px;
+        }
+        .box-image {
+            margin-bottom: 20px;
+            flex: 1 1 90%;
+            max-width: 90%;
+        }
+        .box-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .box-content {
+            flex: 2;
+            min-width: 400px;
+        }
+        .box-content p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+{% endblock %}
+
+{% block main-container %}
+    <div class="box">
+        <div class="box-header page-header">
+            <h1>科技文献关联关系分类系统
+                <small>项目</small>
+            </h1>
+        </div>
+        <div class="box-body">
+            <div class="box-info">
+                <div class="info-image">
+                    <div class="box-image">
+                        <img src="{% static 'image/demo3.jpg' %}" alt="Demo Image 1">
+                    </div>
+                    <div class="box-image">
+                        <img src="{% static 'image/index3.jpg' %}" alt="Demo Image 2">
+                    </div>
+                </div>
+                <div class="box-content">
+                    <p>1. 这是一个科技文献关联关系分类系统，通过对文本数据集的处理，搭建CNN卷积神经网络进行模型训练，从而实现对"经济学", "法学", "计算机", "农学", "药学", "科技", "管理学", "数学类", "教育", "政治"等10个类别智能识别。</p>
+                    <p>2. 通过对相关数据集的训练生成训练模型，使用Django框架将数据结果进行显示，并增加后台管理系统方便使用信息的查看。</p>
+                    <p>3.TextCNN 的主要过程是提取文本的局部特征，即利用不同卷积核大小提取文本的 N-gram 信息（N-Gram 是一种基于统计语言模型的算法），然后利用最大聚合运算提取每个卷积运算提取的最关键信息，并利用交叉熵损失函数合并后通过全连接层合并特征。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
